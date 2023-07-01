@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>主記事</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #FFF;">
+    <div id="content_wrapper"
+        style="background-color: #FFF; width: 50%; height: 100%; overflow: scroll; position: relative;">
+    </div>
+    <div id="content_wrapper2"
+        style="background-color: #FFF; width: 50%; height: 100%; overflow: scroll; position: absolute; left: 50%; top: 0%;">
+    </div>
+    <div id="hidden_document" style="display: none; width: 50%; height: 100%; position:absolute; left: 50%; top: 0%;">
+    </div>
+    <script type="text/javascript" src="/js/insertContent.js"></script>
+    <script type="text/javascript">
+        const content_wrapper = document.getElementById("content_wrapper");
+        const content_wrapper2 = document.getElementById("content_wrapper2");
+
+        insertContent("/content.html", content_wrapper);
+        insertContent("/content2.html", content_wrapper2);
+    </script>
+</body>
+
+</html>
